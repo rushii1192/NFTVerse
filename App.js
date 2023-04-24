@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { useApplicationAndroidInstallReferrer } from '@use-expo/application';
+
 
 export default function App() {
+
+  const [installReferrer] = useApplicationAndroidInstallReferrer();
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={{flexShrink: 1}}>Install referrer: {installReferrer || '-'}</Text>
+      <Text>Install referrer timestamp {installReferrer.referrerClickTimestampSeconds}</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -16,5 +22,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    flexShrink: 1
   },
 });
