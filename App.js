@@ -10,7 +10,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={{flexShrink: 1}}>Install referrer: {installReferrer || '-'}</Text>
-      <Text>Install referrer timestamp {installReferrer.referrerClickTimestampSeconds}</Text>
       <StatusBar style="auto" />
     </View>
   );
