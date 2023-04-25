@@ -21,10 +21,32 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.rushi1192.NFTVerse"
+    },
+"build": {
+    "preview": {
+      "android": {
+        "buildType": "apk"
       }
     },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
+    },
+    "production": {}
+  },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "84bbde89-5aa2-4efd-91b0-e128e33306e8"
+      }
     }
   }
 }
